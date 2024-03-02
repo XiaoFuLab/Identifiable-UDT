@@ -1,5 +1,7 @@
 # Towards Identifiable Unsupervised Domain Translation: A Diversified Distribution Matching Approach
 
+Implementation of the paper "Towards Identifiable Unsupervised Domain Translation: A Diversified Distribution Matching Approach", ICLR 2024. [Arxiv](https://arxiv.org/abs/2401.09671)
+
 ## Installation
 
 Install the required python packages listed in `requirements.txt`. If you use pip run the following:
