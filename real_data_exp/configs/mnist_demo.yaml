@@ -1,0 +1,54 @@
+num_conditionals: 10
+batch_size: 16
+lr: 0.0001
+lr_start_step: 1
+lr_decay: False
+change_lr_every: 10000
+beta1: 0.0
+beta2: 0.99
+epsilon: 1e-8
+weight_decay: 0.00001
+
+train_iters: 100000
+num_workers: 2
+
+gen:
+  use_adain: False
+  w_hpf: False
+  num_downsample: 2
+
+
+gan_criterion: nsgan   # lsgan / nsgan / label_smooth
+recons_criterion: l1   # l1 / l2 / perceptual
+
+# Regularization Parameters
+dis_w: 1.0
+gen_w: 1.0
+recons_w: 10.0
+vgg_w: 0.0
+dis_all_w: 0.0
+r1_reg_w: 1.0
+use_additional_generator_samples: False
+uniform_discriminator_training: False
+
+checkpoint_path: ''
+model_path: ./models/
+sample_path: ./samples/
+data_path: ../data/MNIST
+domain1: mnist
+domain2: rotatedmnist
+
+console_log_steps: 10
+test_sample_steps: 5000
+save_checkpoint_steps: 10000
+
+new_size: 32
+
+# use_wandb: False
+use_wandb: True
+run_name: 'mnist_demo'
+
+horizontal_flip: True
+mislabel_fraction: 0.0
+use_ema: True
+adjust_class_imbalance: True

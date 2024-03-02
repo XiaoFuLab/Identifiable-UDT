@@ -1,0 +1,43 @@
+lr_gen: 0.0001
+lr_dis: 0.0001
+beta1: 0.5
+beta2: 0.999
+weight_decay: 0.0
+batch_size: 1000
+epochs: 100
+num_workers: 4
+
+# regularization wts
+gen_w: 1.0
+dis_w: 1.0
+recons_w: 10.0
+
+# paths
+model_path: './models'
+result_path: './results'
+data_path: './data'
+save_data_file: 'gaussian_mixture.pkl'
+
+gen:
+  hidden_dim: 256
+  num_layers: 2
+  use_batchnorm: False
+  activation_func: 'leaky_relu'
+
+critic:
+  hidden_dim: 128
+
+use_wandb: False
+device: 'cuda'
+test_size: 1000
+train_iters: 2000
+
+# log intervals
+plot_interval: 100
+save_interval: 500
+console_log_interval: 10
+wandb_log_interval: 10
+
+num_train_samples: 20000
+num_test_samples: 1000
+data_dim: 2
